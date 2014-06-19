@@ -5,6 +5,8 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
+#include "parse.h"
+
 using namespace std;
 
 

@@ -2,6 +2,7 @@
 
 CPPFLAGS=-Wall -g
 LDFLAGS=-lreadline
+
 OBJS=pdcalc.o parse.o
 
 
