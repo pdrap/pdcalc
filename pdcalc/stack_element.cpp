@@ -5,7 +5,8 @@
  *      Author: pdrap
  */
 
-#include "StackElement.h"
+#include "stack_element.h"
+
 
 StackElement::StackElement() {
 	// TODO Auto-generated constructor stub

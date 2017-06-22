@@ -1,14 +1,16 @@
-/*
- * StackElement.h
- *
- *  Created on: Jun 24, 2014
- *      Author: pdrap
- */
+#pragma once
 
-#ifndef STACKELEMENT_H_
-#define STACKELEMENT_H_
+#include <gmp.h>
+#include <gmpxx.h>
+
+
+
 
 class StackElement {
+
+	mpz_class real;
+
+
 
 
 public:
@@ -18,4 +20,3 @@ public:
 
 };
 
-#endif /* STACKELEMENT_H_ */
