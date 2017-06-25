@@ -1,11 +1,11 @@
 
 
-CPPFLAGS=-Wall -std=c++11 -g
+CPPFLAGS=-Wall -std=c++11 -g -O0
 LDFLAGS=-L /usr/lib/x86_64-linux-gnu
 
-OBJS=pdcalc.o stack_element.o
+OBJS=pdcalc.o stack_element.o lexer.o
 
-LIBS= -Wl,-Bdynamic -lgmp -lgmpxx
+LIBS= -Wl,-Bdynamic -lgmp -lgmpxx -lreadline
       
 
 all:	pdcalc
