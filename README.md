@@ -12,4 +12,6 @@ Trig functions<br>
 Boolean functions - AND, OR, NOT, XOR<br>
 Time calculations<br>
 <br>
-and more as I decide.
+and more as I decide.<br>
+<br>
+Project status: in development, pre-alpha.
