@@ -3,7 +3,8 @@
 CPPFLAGS=-Wall -std=c++11 -g -O0
 LDFLAGS=-L /usr/lib/x86_64-linux-gnu
 
-OBJS=pdcalc.o stack_element.o lexer.o
+OBJS=pdcalc.o stack_element.o lexer/lexer.o lexer/start.o
+
 
 LIBS= -Wl,-Bdynamic -lgmp -lgmpxx -lreadline
       
@@ -16,11 +17,11 @@ pdcalc: $(OBJS)
 	g++ $(LDFLAGS) $(OBJS) -o pdcalc $(LIBS)
 
 clean:
-	rm -f *.o pdcalc
+	rm -rf *.o pdcalc
 	@echo make clean complete
 	
 depend:
-	for i in *.cpp; do $(CC) $(FLAGS) -MM $$i; done > .depend
+	for i in $(shell find . -name "*.cpp" -print); do $(CC) $(FLAGS) -MM $$i; done > .depend
 	@echo make depend complete
 
 #######################################################################

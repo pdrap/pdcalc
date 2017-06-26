@@ -1,0 +1,131 @@
+/*
+ * parse.cpp
+ *
+ *  Created on: Jun 19, 2014
+ *      Author: pdrap
+ */
+
+
+
+#include <iostream>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/regex.hpp>
+#include <boost/foreach.hpp>
+
+#include "parse.h"
+
+enum eToken : unsigned int {
+	NONE,
+	DECIMAL,
+	BINARY,
+	OCTAL,
+	HEX,
+	STRING
+
+};
+
+
+enum {
+	TAB=9,
+	SPACE=' '
+};
+
+
+using namespace std;
+
+Lexer :: Lexer () {
+
+
+
+}
+
+Lexer :: ~Lexer () {
+
+
+}
+
+int Lexer :: lookahead (int n) {
+
+
+	return 0;
+}
+
+
+int Lexer :: lex (string line) {
+
+	vector <string> sv;
+	int retval;
+
+	boost::split (sv, line, boost::is_any_of (" \t"));
+
+	BOOST_FOREACH (string s, sv) {
+
+		if (s == "quit") {
+			retval = -2;
+			break;
+		}
+		cout << "word " << s << endl;
+
+
+
+
+
+
+	}
+
+//	pos = 0;
+//	tokenpos = 0;
+//	token = "";
+//	tokentype = NONE;
+//	lexstate = START;
+
+//	while (pos < s.length()) {
+//
+//		switch (lexstate) {
+//
+//		case START:
+//			// end of token found
+//			if ((s[pos] == SPACE) || (s[pos] == TAB)) {
+//				if (!token.empty()) {
+//					parser.parse (token, tokentype);
+//				}
+//
+//				tokenpos = 0;
+//				token = "";
+//				tokentype = NONE;
+//				lexstate = START;
+//			}
+//
+//			if (s[pos] == '0') {
+//
+//			}
+//		}
+//
+//
+//		pos ++;
+//		tokenpos ++;
+//	}
+
+
+	return retval; // signal quit
+}
+
+
+Parser :: Parser () {
+
+
+}
+
+Parser :: ~Parser () {
+
+
+}
+
+int Parser :: parse (string token, enum eToken tokentype) {
+
+	return 0;
+}
+
+
+

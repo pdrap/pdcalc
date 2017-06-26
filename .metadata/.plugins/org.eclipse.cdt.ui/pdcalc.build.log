@@ -1,0 +1,9 @@
+00:41:36 **** Incremental Build of configuration Default for project pdcalc ****
+make all 
+g++  -Wall -std=c++11 -g -O0  -c -o lexer/start.o lexer/start.cpp
+g++ -L /usr/lib/x86_64-linux-gnu pdcalc.o stack_element.o lexer/lexer.o lexer/start.o -o pdcalc -Wl,-Bdynamic -lgmp -lgmpxx -lreadline
+Mon Jun 26 00:41:36 CDT 2017
+make all complete
+
+00:41:36 Build Finished (took 225ms)
+

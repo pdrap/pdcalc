@@ -1,0 +1,10 @@
+#pragma once
+
+class State {
+
+public:
+	State(void) = default;
+	State(const State &) = delete;
+	virtual ~State(void) = default;
+
+};

@@ -2,18 +2,20 @@
 
 #include <string>
 
+enum class Lexstate {
+	START,
+
+	END
+};
+
 class Lexer {
 
 
-	enum class Lexstate {
-		START,
 
 
-	};
-
-	unsigned int pos;
-	unsigned int tokenpos;
-	std::string token;
+	//unsigned int pos;
+	//unsigned int tokenpos;
+	//std::string token;
 	//enum eToken tokentype;
 
 

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;pdcalc/StackElement.cpp&apos; to &apos;stack_element.cpp&apos;" description="Rename resource &apos;StackElement.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="StackElement.cpp" name="stack_element.cpp" stamp="1403637528871" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;pdcalc/StackElement.h&apos; to &apos;stack_element.h&apos;" description="Rename resource &apos;StackElement.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="StackElement.h" name="stack_element.h" stamp="1403637572298" updateReferences="true"/>
+</session>

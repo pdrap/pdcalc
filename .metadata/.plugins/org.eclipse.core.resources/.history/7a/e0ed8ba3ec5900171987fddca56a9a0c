@@ -1,0 +1,33 @@
+#include <string>
+
+#include "lexer.h"
+#include "start.h"
+
+Lexer::Lexer(void) {
+	tokens.clear();
+	state = Lexstate::START;
+
+}
+
+Lexer::~Lexer(void) {
+
+}
+
+int Lexer::lex(std::string s) {
+
+	line = s;
+
+	Start startstate();
+
+	return 0;
+}
+
+
+void Lexer::accept(void) {
+
+}
+
+char Lexer::lookahead(void) {
+	return ' ';
+}
+

@@ -1,0 +1,23 @@
+#pragma once
+
+#include "lexer.h"
+
+class State {
+
+public:
+	State(void) = default;
+	State(const State &) = delete;
+	virtual ~State(void) = default;
+
+protected:
+	std::vector<pair<string
+	// accept the current buffer and token
+	void accept (void);
+
+	void
+
+	// peek at the next character
+	char lookahead(void);
+
+
+};

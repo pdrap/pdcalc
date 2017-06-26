@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+#include "lexer.h"
+
+
+int main () {
+	Lexer lexer;
+
+	std::cout << "Calculator v0.1" << std::endl;
+
+	std::stringstream buf("1234567890");
+	std::cin.rdbuf(buf.rdbuf());
+
+	while (1) {
+		std::string line;
+		std::getline(std::cin, line);
+		std::cout << line;
+	}
+
+	std::cout << "quit" << std::endl;
+	return 0;
+}

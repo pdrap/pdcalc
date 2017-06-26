@@ -1,0 +1,36 @@
+
+
+CPPFLAGS=-Wall -std=c++11 -g -O0
+LDFLAGS=-L /usr/lib/x86_64-linux-gnu
+
+OBJS=pdcalc.o stack_element.o lexer/lexer.o
+
+LIBS= -Wl,-Bdynamic -lgmp -lgmpxx -lreadline
+      
+
+all:	pdcalc
+	@date
+	@echo make all complete
+
+pdcalc: $(OBJS)
+	g++ $(LDFLAGS) $(OBJS) -o pdcalc $(LIBS)
+
+clean:
+	rm -rf *.o pdcalc
+	@echo make clean complete
+	
+depend:
+	for i in $( find . -name '*.cpp' ); do $(CC) $(FLAGS) -MM $$i; done > .depend
+	@echo make depend complete
+
+#######################################################################
+# dependency includer below
+#######################################################################
+
+ifeq (.depend,$(wildcard .depend))
+include .depend
+endif
+# DO NOT DELETE
+
+
+	

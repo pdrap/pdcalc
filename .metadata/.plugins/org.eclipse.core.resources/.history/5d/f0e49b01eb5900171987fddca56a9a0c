@@ -1,0 +1,11 @@
+#pragma once
+
+#include "state.h"
+
+class Start: public State {
+
+public:
+	Start(std::String &line) = default;
+	Start(const Start &) = delete;
+	virtual ~Start(void) = default;
+};

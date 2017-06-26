@@ -1,0 +1,18 @@
+#include <string>
+
+#include "lexer.h"
+
+Lexer::Lexer(void) {
+
+
+}
+
+Lexer::~Lexer(void) {
+
+}
+
+int Lexer::lex(std::string s) {
+	Start startstate(s);
+
+	return 0;
+}

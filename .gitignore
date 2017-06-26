@@ -1,5 +1,2 @@
 *.o
-.metadata
 .depend
-.settings
-

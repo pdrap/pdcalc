@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
-
 #include <readline/history.h>
 #include <readline/readline.h>
-#include "lexer.h"
+
+#include "lexer/lexer.h"
 
 
 /* A static variable for holding the line. */
@@ -36,10 +36,16 @@ int main () {
 
 
 	while (rl_gets()) {
+		if (std::string(line_read) == "quit") {
+			break;
+		}
+
 		std::string line(line_read);
 
-		std::cout << line << std::endl;
+		lexer.lex(line);
+
+
 	}
-	std::cout << "quit" << std::endl;
+
 	return 0;
 }

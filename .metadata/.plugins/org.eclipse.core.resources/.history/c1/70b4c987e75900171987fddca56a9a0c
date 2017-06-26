@@ -1,0 +1,9 @@
+#pragma once
+
+class Start: public State {
+
+public:
+	Start(void) = default;
+	Start(const Start &) = delete;
+	virtual ~Start(void) = default;
+}
