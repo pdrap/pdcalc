@@ -6,14 +6,18 @@
 #include "start.h"
 
 Lexer::Lexer(void) {
-	tokens.clear();
-	tokentext.clear();
-	state = Lexstate::START;
-	pos = 0;
+
 }
 
 Lexer::~Lexer(void) {
 
+}
+
+void Lexer::init(void) {
+	tokens.clear();
+	tokentext.clear();
+	state = Lexstate::START;
+	pos = 0;
 }
 
 int Lexer::lex(std::string s) {
@@ -21,7 +25,7 @@ int Lexer::lex(std::string s) {
 	line = s;
 	pos = 0;
 
-	Start startstate();
+	Start();
 
 	return 0;
 }
@@ -38,7 +42,8 @@ void Lexer::accept(void) {
 
 	tokens.push_back(std::make_pair(tokentext, state));
 
-	pos++;
+	pos += tokentext.size();
+	tokentext.clear();
 
 }
 

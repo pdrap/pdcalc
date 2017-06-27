@@ -1,6 +1,0 @@
-#include "start.h"
-
-Start::Start(std::string &line) {
-	initialize(line);
-
-}

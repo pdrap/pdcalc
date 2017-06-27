@@ -31,6 +31,7 @@ char *rl_gets(void) {
 
 int main () {
 	Lexer lexer;
+	lexer.init();
 
 	std::cout << "Calculator v0.1" << std::endl;
 
